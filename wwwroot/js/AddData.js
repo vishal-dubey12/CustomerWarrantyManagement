@@ -20,6 +20,7 @@ $(document).ready(function () {
         addCustomer(formData);
     });
 
+    // Asynchronously adds a customer using provided data via an API request and handles success or error alerts.
     async function addCustomer(data) {
         try {
             await httpPost('/api/api/add', data);
