@@ -31,6 +31,7 @@ export async function getCustomers() {
 }
 
 // Asynchronously deletes a customer using their ID via an API request and handles success or error alerts.
+// using for delete data
 export async function deleteCustomer(id) {
     try {
         await httpDelete('api/api/delete/' + id);
