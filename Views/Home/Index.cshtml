@@ -1,0 +1,44 @@
+﻿@model IEnumerable<DummyCrud.Models.CustomerWarranty>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Data</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <style>
+        .table-container {
+            overflow-x: auto; 
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Data</h1>
+        <div class="table-container">
+            <table id="dataTable" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>EmailID</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>ProductName</th>
+                        <th>Model</th>
+                        <th>PurchasedFrom</th>
+                        <th>InvoiceURL</th>
+                        <th>SSURL</th>
+                        <th>PurchaseDate</th>
+                        <th>CreatedOn</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="~/js/model.js" type="module"></script>
+</body>
+</html>
+
