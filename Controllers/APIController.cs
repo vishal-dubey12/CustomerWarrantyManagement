@@ -52,5 +52,20 @@ namespace DummyCrud.Controllers
             return Ok("Customer deleted successfully!");
         }
 
+        [HttpPut("edit")]
+        public IActionResult EditData([FromBody] CustomerWarranty model)
+        {
+            if (ModelState.IsValid)
+            {
+                _dbContext.CustomerWarranties.Add(model);
+                _dbContext.SaveChanges();
+                return Ok("Data added successfully!");
+            }
+            else
+            {
+                return BadRequest("Invalid model state.");
+            }
+        }
+
     }
 }
